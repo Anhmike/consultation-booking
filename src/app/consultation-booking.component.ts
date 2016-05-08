@@ -30,4 +30,7 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 })
 export class ConsultationBookingAppComponent {
   title = 'consultation-booking works!';
+
+  views: Object[] =
+      [{name: "Home", icon: "home"}, {name: "Book a consultation", icon: "insert_invitation"}];
 }
