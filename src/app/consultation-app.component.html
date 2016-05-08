@@ -1,0 +1,33 @@
+<md-sidenav-layout fullscreen>
+
+  <!-- Side Navigation -->
+  <md-sidenav #sidenav>
+    <md-nav-list>
+      <a [routerLink]="view.link" md-list-item *ngFor="let view of views">
+        <md-icon md-list-icon>{{view.icon}}</md-icon>
+        <span md-line>{{view.name}}</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <!-- Toolbar -->
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>favorite_border</md-icon>
+    </button>
+
+    <button [routerLink]="['Home']" md-button aria-label="Home">
+      <h2>Home</h2>
+    </button>
+
+    <button [routerLink]="['Booking']" md-button aria-label="Book a Consultation">
+      <h2>Book a Consultation</h2>
+    </button>
+  </md-toolbar>
+
+  <!-- Page contents -->
+  <md-content>
+    <router-outlet></router-outlet>
+  </md-content>
+
+</md-sidenav-layout>
