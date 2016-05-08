@@ -9,23 +9,23 @@ import {
 import {ComponentFixture, TestComponentBuilder} from '@angular/compiler/testing';
 import {Component} from '@angular/core';
 import {By} from '@angular/platform-browser';
-import {ConsultationHomeComponent} from './consultation-home.component';
+import {ConsultationBookingComponent} from './consultation-booking.component';
 
-describe('Component: ConsultationHome', () => {
+describe('Component: ConsultationBooking', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [ConsultationHomeComponent]);
+  beforeEachProviders(() => [ConsultationBookingComponent]);
   beforeEach(
       inject([TestComponentBuilder], function(tcb: TestComponentBuilder) { builder = tcb; }));
 
   it('should inject the component',
-     inject([ConsultationHomeComponent],
-            (component: ConsultationHomeComponent) => { expect(component).toBeTruthy(); }));
+     inject([ConsultationBookingComponent],
+            (component: ConsultationBookingComponent) => { expect(component).toBeTruthy(); }));
 
   it('should create the component', inject([], () => {
-       return builder.createAsync(ConsultationHomeComponentTestController)
+       return builder.createAsync(ConsultationBookingComponentTestController)
            .then((fixture: ComponentFixture<any>) => {
-             let query = fixture.debugElement.query(By.directive(ConsultationHomeComponent));
+             let query = fixture.debugElement.query(By.directive(ConsultationBookingComponent));
              expect(query).toBeTruthy();
              expect(query.componentInstance).toBeTruthy();
            });
@@ -35,9 +35,9 @@ describe('Component: ConsultationHome', () => {
 @Component({
   selector: 'test',
   template: `
-    <app-consultation-home></app-consultation-home>
+    <consultation-booking></consultation-booking>
   `,
-  directives: [ConsultationHomeComponent]
+  directives: [ConsultationBookingComponent]
 })
-class ConsultationHomeComponentTestController {
+class ConsultationBookingComponentTestController {
 }

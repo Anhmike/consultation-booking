@@ -8,5 +8,4 @@ import {Component} from '@angular/core';
 
 })
 export class ConsultationBookingComponent {
-  title = 'consultation-booking works!';
 }

@@ -7,8 +7,8 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 
-import {ConsultationHomeComponent} from './consultation-home.component';
-import {ConsultationBookingComponent} from './consultation-booking.component';
+import {ConsultationHomeComponent} from './home/consultation-home.component';
+import {ConsultationBookingComponent} from './booking/consultation-booking.component';
 
 @Component({
   moduleId: module.id,
@@ -24,12 +24,15 @@ import {ConsultationBookingComponent} from './consultation-booking.component';
   {path: '/booking', name: 'Booking', component: ConsultationBookingComponent}
 ])
 export class ConsultationAppComponent implements OnInit {
+  title = 'consultation-app works!';
   views: Object[];
 
   constructor() {}
 
   ngOnInit() {
-    this.views =
-        [{name: "Home", icon: "home", link: ['Home']}, {name: "Book a consultation", icon: "insert_invitation", link: ['Booking']}];
+    this.views = [
+      {name: "Home", icon: "home", link: ['Home']},
+      {name: "Book a consultation", icon: "insert_invitation", link: ['Booking']}
+    ];
   }
 }
