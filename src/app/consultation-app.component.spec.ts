@@ -8,8 +8,8 @@ describe('App: ConsultationApp', () => {
      inject([ConsultationAppComponent],
             (app: ConsultationAppComponent) => { expect(app).toBeTruthy(); }));
 
-  it('should have as title \'consultation-booking works!\'',
+  it('should have title of \'Consultation Booking\'',
      inject([ConsultationAppComponent], (app: ConsultationAppComponent) => {
-       expect(app.title).toEqual('consultation-app works!');
+       expect(app.title).toEqual('Consultation Booking');
      }));
 });

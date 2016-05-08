@@ -16,23 +16,23 @@ import {ConsultationBookingComponent} from './booking/consultation-booking.compo
   templateUrl: 'consultation-app.component.html',
   styleUrls: ['consultation-app.component.css'],
   directives:
-      [MD_SIDENAV_DIRECTIVES, MD_LIST_DIRECTIVES, MdToolbar, MdButton, MdIcon, ROUTER_DIRECTIVES],
+  [MD_SIDENAV_DIRECTIVES, MD_LIST_DIRECTIVES, MdToolbar, MdButton, MdIcon, ROUTER_DIRECTIVES],
   providers: [MdIconRegistry, ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  {path: '/', name: 'Home', component: ConsultationHomeComponent, useAsDefault: true},
-  {path: '/booking', name: 'Booking', component: ConsultationBookingComponent}
+  { path: '/', name: 'Home', component: ConsultationHomeComponent, useAsDefault: true },
+  { path: '/booking', name: 'Booking', component: ConsultationBookingComponent }
 ])
 export class ConsultationAppComponent implements OnInit {
-  title = 'consultation-app works!';
+  title: string = 'Consultation Booking';
   views: Object[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.views = [
-      {name: "Home", icon: "home", link: ['Home']},
-      {name: "Book a consultation", icon: "insert_invitation", link: ['Booking']}
+      { name: "Home", icon: "home", link: ['Home'] },
+      { name: "Book a consultation", icon: "insert_invitation", link: ['Booking'] }
     ];
   }
 }
